@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Is Flutter Worth Learning in 2026? — Career Opportunities in Mumbai</title>
+<meta name="description" content="Is Flutter worth learning in 2026? Explore career opportunities in Mumbai, course details and guides to get placement-ready.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0a0e18;
+    --ink-soft:#121a2b;
+    --ink-line:#243046;
+    --sky:#2fd0ff;
+    --sky-deep:#1f7ae0;
+    --coral:#ff6b4a;
+    --gold:#ffc857;
+    --paper:#f4f7fb;
+    --paper-line:#dfe6f0;
+    --ink-text:#0a0e18;
+    --muted:#6b7488;
+    --radius:20px;
+    --max:1160px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    background:var(--ink);
+    color:#eef2fb;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{font-family:'Space Grotesk',sans-serif;}
+  a{color:inherit;text-decoration:none;}
+  .mono{font-family:'JetBrains Mono',monospace;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+  img,svg{display:block;max-width:100%;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    backdrop-filter:blur(14px);
+    background:rgba(10,14,24,0.72);
+    border-bottom:1px solid var(--ink-line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.15rem;letter-spacing:-0.02em;}
+  .logo-mark{width:30px;height:30px;position:relative;}
+  .logo-mark span{
+    position:absolute;inset:0;
+    border-radius:9px;
+    background:linear-gradient(135deg,var(--sky),var(--sky-deep));
+    animation:flap 2.6s ease-in-out infinite;
+    transform-origin:left center;
+  }
+  .logo-mark span:nth-child(2){
+    background:linear-gradient(135deg,var(--coral),var(--gold));
+    animation-delay:0.15s;
+    opacity:0.85;
+    transform:rotate(20deg);
+  }
+  @keyframes flap{
+    0%,100%{transform:rotate(0deg) scaleY(1);}
+    50%{transform:rotate(-18deg) scaleY(0.85);}
+  }
+  nav.links{display:flex;gap:28px;font-size:0.92rem;font-weight:500;color:#b9c2d6;}
+  nav.links a:hover{color:var(--sky);}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:11px 22px;border-radius:999px;
+    font-weight:600;font-size:0.9rem;
+    background:linear-gradient(135deg,var(--coral),#ff8a63);
+    color:#1a0d08;
+    box-shadow:0 8px 24px -8px rgba(255,107,74,0.6);
+    transition:transform 0.25s ease, box-shadow 0.25s ease;
+    white-space:nowrap;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px -6px rgba(255,107,74,0.75);}
+  .btn.ghost{
+    background:transparent;border:1px solid var(--ink-line);color:#eef2fb;box-shadow:none;
+  }
+  .btn.ghost:hover{border-color:var(--sky);color:var(--sky);transform:translateY(-2px);}
+  .burger{display:none;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    padding:110px 24px 90px;
+    overflow:hidden;
+    isolation:isolate;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;inset:-20% -10%;
+    background:
+      radial-gradient(circle at 18% 20%, rgba(47,208,255,0.22), transparent 45%),
+      radial-gradient(circle at 82% 12%, rgba(255,107,74,0.18), transparent 40%),
+      radial-gradient(circle at 60% 90%, rgba(255,200,87,0.12), transparent 45%);
+    z-index:-1;
+    animation:drift 16s ease-in-out infinite alternate;
+  }
+  @keyframes drift{
+    0%{transform:translate(0,0) scale(1);}
+    100%{transform:translate(-2%,2%) scale(1.05);}
+  }
+  .hero-inner{display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center;max-width:var(--max);margin:0 auto;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:0.78rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;
+    color:var(--sky);background:rgba(47,208,255,0.1);
+    border:1px solid rgba(47,208,255,0.3);
+    padding:7px 14px;border-radius:999px;margin-bottom:22px;
+  }
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--coral);animation:pulse 1.6s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.4;transform:scale(1.4);}}
+  h1.hero-title{
+    font-size:clamp(2.3rem,5vw,3.6rem);
+    line-height:1.06;
+    letter-spacing:-0.02em;
+    margin:0 0 22px;
+  }
+  h1.hero-title .grad{
+    background:linear-gradient(100deg,var(--sky),var(--gold) 60%, var(--coral));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero-sub{font-size:1.08rem;color:#b9c2d6;max-width:52ch;margin:0 0 34px;line-height:1.6;}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+
+  /* Widget-tree illustration */
+  .tree-card{
+    background:linear-gradient(180deg,#111a2c,#0c1220);
+    border:1px solid var(--ink-line);
+    border-radius:var(--radius);
+    padding:22px 22px 26px;
+    box-shadow:0 30px 60px -30px rgba(0,0,0,0.7);
+    position:relative;
+  }
+  .tree-card .tab-bar{display:flex;gap:6px;margin-bottom:16px;}
+  .tab-bar span{width:10px;height:10px;border-radius:50%;background:var(--ink-line);}
+  .tab-bar span:nth-child(1){background:#ff6b4a;}
+  .tab-bar span:nth-child(2){background:#ffc857;}
+  .tab-bar span:nth-child(3){background:#2fd0ff;}
+  pre.code{margin:0;font-size:0.78rem;line-height:1.65;color:#9db4d6;overflow-x:auto;}
+  pre.code .kw{color:#ff8a63;}
+  pre.code .cls{color:#2fd0ff;}
+  pre.code .str{color:#ffc857;}
+  pre.code .cmt{color:#5b6478;font-style:italic;}
+  .caret{display:inline-block;width:7px;height:15px;background:var(--sky);vertical-align:middle;animation:blink 1s steps(2) infinite;}
+  @keyframes blink{50%{opacity:0;}}
+
+  /* ---------- SECTION SHELLS ---------- */
+  section{padding:96px 24px;}
+  .section-head{max-width:640px;margin:0 auto 56px;text-align:center;}
+  .section-head .kicker{
+    font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral);margin-bottom:12px;display:block;
+  }
+  .section-head h2{font-size:clamp(1.8rem,3.4vw,2.5rem);letter-spacing:-0.02em;margin:0 0 14px;}
+  .section-head p{color:#9aa3b8;font-size:1.02rem;line-height:1.6;}
+
+  /* light band */
+  .band-light{background:var(--paper);color:var(--ink-text);}
+  .band-light .section-head p{color:var(--muted);}
+
+  /* ---------- WHY FLUTTER CARDS ---------- */
+  .grid-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:var(--max);margin:0 auto;}
+  .card{
+    background:#fff;border:1px solid var(--paper-line);border-radius:var(--radius);
+    padding:30px 26px;transition:transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover{transform:translateY(-6px);box-shadow:0 24px 40px -20px rgba(31,122,224,0.25);}
+  .card .icon{
+    width:46px;height:46px;border-radius:13px;
+    display:flex;align-items:center;justify-content:center;
+    background:linear-gradient(135deg,var(--sky-deep),var(--sky));
+    margin-bottom:18px;color:#fff;font-size:1.3rem;font-weight:700;
+  }
+  .card h3{margin:0 0 10px;font-size:1.15rem;}
+  .card p{margin:0;color:var(--muted);font-size:0.94rem;line-height:1.6;}
+
+  /* ---------- MUMBAI ROUTE MAP (signature) ---------- */
+  .route-section{position:relative;background:var(--ink-soft);}
+  .route-wrap{max-width:var(--max);margin:0 auto;}
+  .route-svg{width:100%;height:auto;}
+  .route-line{stroke:url(#lineGrad);stroke-width:4;fill:none;stroke-dasharray:6 10;stroke-linecap:round;}
+  .train-dot{fill:var(--gold);filter:drop-shadow(0 0 8px rgba(255,200,87,0.9));}
+  .station-label{font-family:'Space Grotesk',sans-serif;font-size:13px;fill:#eef2fb;font-weight:600;}
+  .station-sub{font-family:'Inter',sans-serif;font-size:10.5px;fill:#8b96ad;}
+  .station-dot{fill:var(--ink);stroke:var(--sky);stroke-width:3;}
+
+  /* ---------- COURSE + BLOG ---------- */
+  .split{
+    display:grid;grid-template-columns:1fr 1fr;gap:26px;max-width:var(--max);margin:0 auto;
+  }
+  .feature-card{
+    grid-column:1 / -1;
+    display:grid;grid-template-columns:1.2fr 1fr;gap:0;
+    background:linear-gradient(120deg,#0e1626,#131d33);
+    border:1px solid var(--ink-line);
+    border-radius:var(--radius);
+    overflow:hidden;
+    color:#eef2fb;
+  }
+  .feature-card .fc-copy{padding:44px;}
+  .feature-card .fc-copy span.tag{
+    display:inline-block;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
+    color:var(--ink);background:var(--gold);padding:5px 12px;border-radius:999px;margin-bottom:16px;
+  }
+  .feature-card h3{font-size:1.6rem;margin:0 0 14px;letter-spacing:-0.01em;}
+  .feature-card p{color:#b9c2d6;line-height:1.7;margin:0 0 26px;}
+  .fc-visual{
+    position:relative;
+    background:
+      radial-gradient(circle at 30% 30%, rgba(47,208,255,0.35), transparent 60%),
+      radial-gradient(circle at 70% 70%, rgba(255,107,74,0.3), transparent 60%);
+    display:flex;align-items:center;justify-content:center;
+    min-height:220px;
+  }
+  .fc-visual .badge{
+    width:120px;height:120px;border-radius:32px;
+    background:linear-gradient(135deg,var(--sky),var(--sky-deep));
+    display:flex;align-items:center;justify-content:center;
+    font-size:2.6rem;font-weight:700;color:#fff;
+    box-shadow:0 20px 40px -16px rgba(31,122,224,0.7);
+    animation:float 4s ease-in-out infinite;
+  }
+  @keyframes float{0%,100%{transform:translateY(0) rotate(-2deg);}50%{transform:translateY(-12px) rotate(2deg);}}
+
+  .blog-card{
+    background:#fff;border:1px solid var(--paper-line);border-radius:var(--radius);
+    padding:0;overflow:hidden;display:flex;flex-direction:column;
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .blog-card:hover{transform:translateY(-6px);box-shadow:0 24px 44px -22px rgba(10,14,24,0.35);}
+  .blog-card .bc-top{
+    padding:26px 26px 0;
+  }
+  .blog-card .bc-tag{
+    display:inline-block;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;
+    color:var(--sky-deep);background:rgba(31,122,224,0.1);padding:5px 11px;border-radius:999px;margin-bottom:14px;
+  }
+  .blog-card h3{font-size:1.2rem;margin:0 0 10px;color:var(--ink-text);line-height:1.35;}
+  .blog-card p{color:var(--muted);font-size:0.93rem;line-height:1.6;margin:0 0 20px;}
+  .blog-card .bc-bottom{
+    margin-top:auto;padding:18px 26px;border-top:1px solid var(--paper-line);
+    display:flex;align-items:center;justify-content:space-between;font-weight:600;font-size:0.88rem;color:var(--coral);
+  }
+  .blog-card .bc-bottom .arrow{transition:transform 0.25s ease;}
+  .blog-card:hover .bc-bottom .arrow{transform:translateX(5px);}
+
+  /* ---------- FAQ ---------- */
+  .faq{max-width:760px;margin:0 auto;}
+  details{
+    border-bottom:1px solid var(--ink-line);padding:20px 4px;
+  }
+  details summary{
+    cursor:pointer;font-weight:600;font-size:1.02rem;list-style:none;display:flex;justify-content:space-between;align-items:center;
+  }
+  details summary::-webkit-details-marker{display:none;}
+  details summary::after{content:"+";font-size:1.4rem;color:var(--sky);transition:transform 0.25s ease;}
+  details[open] summary::after{transform:rotate(45deg);}
+  details p{color:#9aa3b8;line-height:1.7;margin:14px 0 0;font-size:0.95rem;}
+
+  /* ---------- CTA BANNER ---------- */
+  .cta-banner{
+    max-width:var(--max);margin:0 auto;
+    background:linear-gradient(120deg,var(--sky-deep),var(--sky) 55%,var(--gold));
+    border-radius:28px;padding:56px 44px;
+    display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;
+    color:#061019;
+  }
+  .cta-banner h2{margin:0 0 8px;font-size:1.9rem;letter-spacing:-0.02em;}
+  .cta-banner p{margin:0;color:#0a2338;opacity:0.85;max-width:46ch;}
+  .cta-banner .btn{background:#061019;color:#fff;box-shadow:0 14px 30px -10px rgba(0,0,0,0.5);}
+  .cta-banner .btn:hover{background:#0d1b2e;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:#070a12;border-top:1px solid var(--ink-line);padding:64px 24px 30px;}
+  .foot-grid{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;}
+  .foot-grid h4{font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;color:#8b96ad;margin:0 0 18px;}
+  .foot-grid ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px;}
+  .foot-grid a{color:#c3cbdd;font-size:0.92rem;}
+  .foot-grid a:hover{color:var(--sky);}
+  .foot-bottom{
+    max-width:var(--max);margin:50px auto 0;padding-top:24px;border-top:1px solid var(--ink-line);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#5b6478;font-size:0.85rem;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:900px){
+    .hero-inner{grid-template-columns:1fr;}
+    .grid-cards{grid-template-columns:1fr 1fr;}
+    .feature-card{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:640px){
+    nav.links{display:none;}
+    .grid-cards{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr;}
+    .cta-banner{flex-direction:column;text-align:center;}
+    section{padding:70px 20px;}
+    .hero{padding:90px 20px 60px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#top" class="logo">
+      <span class="logo-mark"><span></span><span></span></span>
+      flutter<span style="color:var(--sky);">.mumbai</span>
+    </a>
+    <nav class="links">
+      <a href="#why">Why Flutter</a>
+      <a href="#careers">Careers</a>
+      <a href="#course">Course</a>
+      <a href="#reads">Blog</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn" href="https://www.justacademy.co/course-detail/flutter-training" target="_blank" rel="noopener">Explore Course →</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> 2026 Career Guide</span>
+        <h1 class="hero-title">Is <span class="grad">Flutter</span> worth learning in 2026?</h1>
+        <p class="hero-sub">One codebase. iOS, Android and the web, shipped together. Here's an honest, fun look at where Flutter stands today — and the doors it can open for developers across Mumbai.</p>
+        <div class="hero-cta">
+          <a class="btn" href="https://www.justacademy.co/course-detail/flutter-training" target="_blank" rel="noopener">Start the Flutter Course</a>
+          <a class="btn ghost" href="#careers">See Mumbai Careers</a>
+        </div>
+      </div>
+      <div class="tree-card">
+        <div class="tab-bar"><span></span><span></span><span></span></div>
+        <pre class="code"><span class="cmt">// widget_tree.dart</span>
+<span class="kw">class</span> <span class="cls">CareerPath</span> <span class="kw">extends</span> <span class="cls">StatelessWidget</span> {
+  <span class="kw">Widget</span> build(context) {
+    <span class="kw">return</span> <span class="cls">Column</span>(
+      children: [
+        <span class="cls">Skill</span>(<span class="str">'Dart & Flutter'</span>),
+        <span class="cls">Skill</span>(<span class="str">'UI Widgets'</span>),
+        <span class="cls">Skill</span>(<span class="str">'State Mgmt'</span>),
+        <span class="cls">Skill</span>(<span class="str">'API Integration'</span>),
+        <span class="cls">Outcome</span>(<span class="str">'Placed in Mumbai'</span>),
+      ],
+    );
+  }
+}<span class="caret"></span></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY FLUTTER -->
+  <section class="band-light" id="why">
+    <div class="section-head">
+      <span class="kicker">The Case For Flutter</span>
+      <h2>Why it still turns heads in 2026</h2>
+      <p>Flutter didn't just survive the framework wars — it became the default answer for teams who want speed without splitting their team in two.</p>
+    </div>
+    <div class="grid-cards">
+      <div class="card">
+        <div class="icon">⟡</div>
+        <h3>One codebase, every screen</h3>
+        <p>Write once in Dart and ship to iOS, Android, web and desktop — no separate native teams required.</p>
+      </div>
+      <div class="card">
+        <div class="icon">⚡</div>
+        <h3>Hot reload, real speed</h3>
+        <p>See changes the instant you save. Faster iteration means faster portfolios and faster client demos.</p>
+      </div>
+      <div class="card">
+        <div class="icon">◆</div>
+        <h3>Backed by Google</h3>
+        <p>Actively maintained, widely documented, and trusted by production apps used by millions worldwide.</p>
+      </div>
+      <div class="card">
+        <div class="icon">▤</div>
+        <h3>Pixel-perfect UI</h3>
+        <p>Flutter renders its own widgets, so your app looks identical — and beautiful — on every device.</p>
+      </div>
+      <div class="card">
+        <div class="icon">☍</div>
+        <h3>One skill, many roles</h3>
+        <p>Mobile developer, startup generalist, freelancer, or product engineer — the skill set travels well.</p>
+      </div>
+      <div class="card">
+        <div class="icon">✦</div>
+        <h3>Community & packages</h3>
+        <p>A mature package ecosystem on pub.dev means you rarely build common features from scratch.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MUMBAI CAREER ROUTE MAP -->
+  <section class="route-section" id="careers">
+    <div class="route-wrap">
+      <div class="section-head">
+        <span class="kicker">Local Line, New Destination</span>
+        <h2>Your Flutter career route — Mumbai edition</h2>
+        <p>Think of this like a local train line. Every station is a skill. The terminus is a job in one of Mumbai's growing tech hubs — from BKC to Powai to Andheri.</p>
+      </div>
+
+      <svg class="route-svg" viewBox="0 0 1100 220" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#2fd0ff"/>
+            <stop offset="50%" stop-color="#ffc857"/>
+            <stop offset="100%" stop-color="#ff6b4a"/>
+          </linearGradient>
+        </defs>
+        <path class="route-line" d="M 60 110 L 1040 110"/>
+        <circle class="train-dot" r="7">
+          <animateMotion dur="7s" repeatCount="indefinite" path="M 60 110 L 1040 110"/>
+        </circle>
+
+        <!-- Station 1 -->
+        <circle class="station-dot" cx="90" cy="110" r="9"/>
+        <text class="station-label" x="90" y="70" text-anchor="middle">Learn Dart</text>
+        <text class="station-sub" x="90" y="150" text-anchor="middle">Syntax & basics</text>
+
+        <!-- Station 2 -->
+        <circle class="station-dot" cx="310" cy="110" r="9"/>
+        <text class="station-label" x="310" y="150" text-anchor="middle">Flutter Widgets</text>
+        <text class="station-sub" x="310" y="70" text-anchor="middle">UI building blocks</text>
+
+        <!-- Station 3 -->
+        <circle class="station-dot" cx="530" cy="110" r="9"/>
+        <text class="station-label" x="530" y="70" text-anchor="middle">Build Real Apps</text>
+        <text class="station-sub" x="530" y="150" text-anchor="middle">Projects & APIs</text>
+
+        <!-- Station 4 -->
+        <circle class="station-dot" cx="750" cy="110" r="9"/>
+        <text class="station-label" x="750" y="150" text-anchor="middle">Portfolio & Interviews</text>
+        <text class="station-sub" x="750" y="70" text-anchor="middle">Get placement-ready</text>
+
+        <!-- Station 5 (terminus) -->
+        <circle class="station-dot" cx="1010" cy="110" r="11" style="stroke:var(--gold);"/>
+        <text class="station-label" x="1010" y="70" text-anchor="middle" style="fill:#ffc857;">Mumbai Job ✓</text>
+        <text class="station-sub" x="1010" y="150" text-anchor="middle">Startups · MNCs · Agencies</text>
+      </svg>
+
+      <div class="grid-cards" style="margin-top:56px;">
+        <div class="card" style="background:#111a2c;border-color:var(--ink-line);">
+          <div class="icon">🏙️</div>
+          <h3 style="color:#eef2fb;">Startup hubs</h3>
+          <p style="color:#9aa3b8;">Mumbai's startup scene across Andheri and Powai is constantly shipping new consumer apps — fertile ground for Flutter developers.</p>
+        </div>
+        <div class="card" style="background:#111a2c;border-color:var(--ink-line);">
+          <div class="icon">🏢</div>
+          <h3 style="color:#eef2fb;">Corporate & BKC</h3>
+          <p style="color:#9aa3b8;">Enterprises around BKC increasingly need cross-platform teams to modernize internal and customer-facing apps.</p>
+        </div>
+        <div class="card" style="background:#111a2c;border-color:var(--ink-line);">
+          <div class="icon">💼</div>
+          <h3 style="color:#eef2fb;">Freelance & agencies</h3>
+          <p style="color:#9aa3b8;">Digital agencies across the city regularly need Flutter freelancers for client MVPs and app revamps.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSE FEATURE -->
+  <section class="band-light" id="course">
+    <div class="split">
+      <div class="feature-card">
+        <div class="fc-copy">
+          <span class="tag">Flutter Training</span>
+          <h3>Learn Flutter the practical way</h3>
+          <p>A structured, project-first Flutter training program designed to take you from fundamentals to a placement-ready portfolio — built with Mumbai's job market in mind.</p>
+          <a class="btn" href="https://www.justacademy.co/course-detail/flutter-training" target="_blank" rel="noopener">View Course Details →</a>
+        </div>
+        <div class="fc-visual">
+          <div class="badge">Fl</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOGS -->
+  <section id="reads">
+    <div class="section-head">
+      <span class="kicker">Go Deeper</span>
+      <h2>Read the full story</h2>
+      <p>Two guides that unpack the Flutter opportunity in more detail — worth a proper read before you commit.</p>
+    </div>
+    <div class="grid-cards" style="grid-template-columns:repeat(2,1fr);">
+      <a class="blog-card" href="https://www.justacademy.co/blog-detail/is-flutter-worth-learning-in-2026-career-opportunities-in-mumbai" target="_blank" rel="noopener">
+        <div class="bc-top">
+          <span class="bc-tag">Career Guide</span>
+          <h3>Is Flutter Worth Learning in 2026? Career Opportunities in Mumbai</h3>
+          <p>A closer look at where Flutter stands today and what career paths it opens up for developers in Mumbai.</p>
+        </div>
+        <div class="bc-bottom">Read the blog <span class="arrow">→</span></div>
+      </a>
+      <a class="blog-card" href="https://www.justacademy.co/blog-detail/flutter-course-in-mumbai-with-placement-everything-you-need-to-know" target="_blank" rel="noopener">
+        <div class="bc-top">
+          <span class="bc-tag">Course Breakdown</span>
+          <h3>Flutter Course in Mumbai with Placement: Everything You Need to Know</h3>
+          <p>Curriculum, structure and placement support — everything to know before enrolling in a Flutter course.</p>
+        </div>
+        <div class="bc-bottom">Read the blog <span class="arrow">→</span></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="section-head">
+      <span class="kicker">Quick Answers</span>
+      <h2>Before you hit enroll</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>Do I need prior coding experience?</summary>
+        <p>No. Flutter uses Dart, a beginner-friendly language. Most learners start with zero mobile development background.</p>
+      </details>
+      <details>
+        <summary>Is Flutter only for mobile apps?</summary>
+        <p>No — the same codebase can target Android, iOS, web and desktop, which is a big part of its appeal.</p>
+      </details>
+      <details>
+        <summary>What kind of roles can I aim for in Mumbai?</summary>
+        <p>Flutter developer, mobile app engineer, startup generalist engineer, and freelance app builder are all common paths.</p>
+      </details>
+      <details>
+        <summary>How do I get started?</summary>
+        <p>Start with the Flutter training course linked above, then work through the two blog guides for extra context on the market.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section>
+    <div class="cta-banner">
+      <div>
+        <h2>Ready to build your first Flutter app?</h2>
+        <p>Join the training program and start shipping cross-platform apps with a Mumbai job in sight.</p>
+      </div>
+      <a class="btn" href="https://www.justacademy.co/course-detail/flutter-training" target="_blank" rel="noopener">Enroll in the Course →</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <div class="logo" style="margin-bottom:14px;">
+        <span class="logo-mark"><span></span><span></span></span>
+        flutter<span style="color:var(--sky);">.mumbai</span>
+      </div>
+      <p style="color:#8b96ad;font-size:0.9rem;line-height:1.6;max-width:32ch;">A quick, honest guide to learning Flutter in 2026 and the career doors it opens across Mumbai.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#why">Why Flutter</a></li>
+        <li><a href="#careers">Mumbai Careers</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Course</h4>
+      <ul>
+        <li><a href="https://www.justacademy.co/course-detail/flutter-training" target="_blank" rel="noopener">Flutter Training</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Read</h4>
+      <ul>
+        <li><a href="https://www.justacademy.co/blog-detail/is-flutter-worth-learning-in-2026-career-opportunities-in-mumbai" target="_blank" rel="noopener">Flutter Careers in Mumbai</a></li>
+        <li><a href="https://www.justacademy.co/blog-detail/flutter-course-in-mumbai-with-placement-everything-you-need-to-know" target="_blank" rel="noopener">Course with Placement</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 flutter.mumbai — a community learning guide.</span>
+    <span>Built with Flutter energy 🦋</span>
+  </div>
+</footer>
+
+</body>
+</html>
